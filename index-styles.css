@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #303030;
+    --font-title:'Roboto', sans-serif;
+    --font-title-size: 2rem;
+    --header-font-size: 2rem;
+    --font-text: 'Poppins', sans-serif;
+    --font-text-size: 1.6rem;
+}
+
 * {
     box-sizing: border-box; 
     padding: 0px;
@@ -12,16 +21,46 @@ html {
 .header {
     width: 100%;
     height: 80px;
-    background-color: aqua;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     padding: 3% 5%;
 }
 
+.header-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+.header-logo img{
+    width: 50px;
+    height: 50px;
+}
+
+.header-logo h1 {
+    margin-left: 2%;
+    color: white;
+    font-family: var(--font-title);
+    font-size: var(--header-font-size);
+}
+
 .header-nav--menu {
     width: 100%;
     height: 100%;
+    /* background-color: blueviolet; */
+    padding: 5px;
 }
+
+svg {
+    fill: #BCBCBC;
+    /* background-color: rgb(114, 114, 114); */
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+}
+
 
 .main {
     width: 100%;
@@ -29,14 +68,16 @@ html {
     padding-top: 3%;
     padding-bottom: 3%;
     border: 1px solid black;
-    background-color: rgb(0, 255, 136);
+    background-color: rgb(255, 255, 255);
 }
 
 .main_Hero {
     padding: 2%;
     text-align: center;
     border: 1px solid black;
-    background-color: rgb(61, 133, 99);
+    background-color: rgb(255, 255, 255);
+    font-family: var(--font-title);
+    font-size: 2rem;
 }
 
 .main_Services {
@@ -48,8 +89,10 @@ html {
     margin-bottom: 3%;
     text-align: center;
     border: 1px solid black;
-    background-color: rgb(61, 133, 99);
+    background-color: rgb(255, 255, 255);
     padding: 2%;
+    font-family: var(--font-title);
+    font-size: 2rem;
 }
 
 .Experience {
@@ -63,7 +106,7 @@ html {
 .footer {
     width: 100%;
     padding: 3% 5%;
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
 }
 
 .footer_AboutUs {
@@ -73,6 +116,8 @@ html {
     text-align: center;
     border: 1px solid black;
     padding: 2%;
+    font-family: var(--font-title);
+    font-size: 2rem;
 }
 
 
