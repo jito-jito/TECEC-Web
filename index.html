@@ -33,7 +33,7 @@
         </article>
         <section class="main_Services">
             <div class="main_Container">  
-                <figure class="Test-Box">
+                <figure class="main_Container--box">
                     <img src="./images/main/services/imagen1.jpg" alt="">
                 </figure>
                 <h1>Servicios de dibujo y modificación</h1>
@@ -41,7 +41,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>           
             </div>
             <div class="main_Container">  
-                <figure class="Test-Box">
+                <figure class="main_Container--box">
                     <img src="./images/main/services/imagen2.jpg" alt="">
                 </figure>
                 <h1>Proyectos e Instalaciones</h1>
@@ -49,21 +49,21 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>           
             </div>
             <div class="main_Container">  
-                <figure class="Test-Box">
+                <figure class="main_Container--box">
                     <img src="./images/main/services/imagen3.jpg" alt="">
                 </figure>
                 <h1>Supervisión de proyectos y evaluación eléctrica</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>           
             </div>
             <div class="main_Container">  
-                <figure class="Test-Box">
+                <figure class="main_Container--box">
                     <img src="./images/main/services/imagen4.jpg" alt="">
                 </figure>
                 <h1>Confección y/o certificación de planos y documentos técnicos</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>           
             </div>
             <div class="main_Container">  
-                <figure class="Test-Box">
+                <figure class="main_Container--box">
                     <img src="./images/main/services/imagen5.jpg" alt="">
                 </figure>
                 <h1>Tableros eléctricos</h1>
@@ -75,7 +75,7 @@
             <h1>Misión / Visión</h1>
             <img class="mision--img" src="./images/main/mision/medalla.jpg" alt="Servicios">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
-            <div>
+            <div class="main_Hero--div">
                 <hr>
                 <button>Leer más..</button>
             </div>
@@ -92,26 +92,34 @@
     </main>
     <footer class="footer">
         <section class="footer_AboutUs">
-            <h1>Contacto</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor s</p>
-            <h1>En la web</h1>
-            <div class="Test-container">
-                <div class="Test-Box2"></div>
-                <div class="Test-Box2"></div>
-            </div>
-            <h1>Sobre tecec</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor s</p>
+            <article class="footer_AboutUs--Container">
+                <h1>Contacto</h1>
+                <p>+569 58514574<br>+569 58514574<br>tececservicios@gmail.com</p>
+            </article>
+            <article class="footer_AboutUs--Container">
+                <h1>En la web</h1>
+                <div class="footer_AboutUs--images">
+                    <img class="footer_AboutUs--img" src="./images/footer/logotipo-de-instagram.svg" alt="">
+                    <img class="footer_AboutUs--img" src="./images/footer/gmail.svg" alt="">
+                </div>
+            </article>
+            <article class="footer_AboutUs--Container">
+                <h1>Sobre tecec</h1>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor s</p>
+            </article>
+            
         </section>
         <section class="footer_ContactUs">
             <form action="">
-                <h2>Tu nombre</h2>
-                <input type="text">
-                <h2>Tu correo eléctronico</h2>
-                <input type="text">
-                <h2>Asunto</h2>
-                <input type="text">
-                <h2>Tu mensaje</h2>
-                <input type="text">
+                <h2 class="footer_ContactUs--Title">Tu nombre</h2>
+                <input class="footer_ContactUs--Input" type="text">
+                <h2 class="footer_ContactUs--Title">Tu correo eléctronico</h2>
+                <input class="footer_ContactUs--Input" type="text">
+                <h2 class="footer_ContactUs--Title">Asunto</h2>
+                <input class="footer_ContactUs--Input" type="text">
+                <h2 class="footer_ContactUs--Title">Tu mensaje</h2>
+                <input class="footer_ContactUs--Input message" type="text">
+                <button class="footer_ContactUs--Button">Enviar</button>
             </form>
         </section>
     </footer>
