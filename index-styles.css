@@ -88,6 +88,13 @@ html {
     opacity: 0.97;
 }
 
+.menu.close {
+    display: none;
+}
+
+.menu.open {
+    display: flex;
+}
 
 .menu li {
     position: relative;
@@ -99,7 +106,9 @@ html {
     text-align: center;
     list-style: none;
     background-color: #303030;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.788);
+    padding: 20px 0px;
+    box-sizing: border-box;
 }
 
 
