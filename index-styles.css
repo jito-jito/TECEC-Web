@@ -47,11 +47,11 @@ html {
     font-size: var(--header-font-size);
 }
 
-
 .header-nav {
     width: 35px;
     height: 35px;
 }
+
 
 .header-nav--menu {
     width: 100%;
@@ -64,17 +64,16 @@ html {
     border: none;
 }
 
+
 .header-nav--menu.close {
     border: none;
     background-image: url("./images/header/menu/icons8-menú-24.svg");
 }
 
-
 .header-nav--menu.open {
     border: none;
     background-image: url("./images/header/menu/cerrar-24.svg");
 }
-
 
 /* menu test */
 .menu {
@@ -130,6 +129,7 @@ html {
     background-color: rgb(255, 255, 255);
 }
 
+
 .main_Hero {
     padding: 2%;
     text-align: center;
@@ -169,6 +169,7 @@ html {
     position: relative;
     bottom: -20px;
 }
+
 .main_Hero button {
     background-color: #DCA70C;
     position: relative;
@@ -183,6 +184,7 @@ html {
     /* color: white; */
     cursor: pointer;
 }
+
 
 .main_Services {
     margin-top: 5%;

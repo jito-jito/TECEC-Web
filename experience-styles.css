@@ -70,7 +70,36 @@ html {
     height: 60px;
 }
 
-.img {
+.boton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:60px;
+    height:60px;
+    background-color:#3b3b3b;
+    margin: 5px;
+    padding:10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size:11px;
+    line-height:32px;
+    text-transform: uppercase;
+    float:left;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .boton:hover{
+    opacity: 0.50;
+    -moz-opacity: .50;
+    filter:alpha (opacity=50);
+  }
+
+/* .img {
     display: flex;
     width: 60px;
     height: 60px;
@@ -84,17 +113,17 @@ html {
     justify-content: center;
     position: fixed;
     bottom: 0;
-    /* left: 0; */
+    left: 0;
     right: 0;
     margin-right: 20px;
     margin-bottom: 20px;
 }
-
+*/
 .img2 {
     position: relative;
     left: -2px;
     width: 22px;
-}
+} 
 
 /* end */
 
