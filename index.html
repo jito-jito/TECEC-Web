@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecec Servicios</title>
-    <link rel="stylesheet" href="./index-styles.css">
+    <link rel="stylesheet" href="./static/css/Mobile/index-styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 
 
@@ -23,13 +23,13 @@
         </nav>
     </header>
     <nav class="close menu" id="nav-menu">
-        <li>Servicios</li>
-        <li>Experiencia</li>
-        <li>Misión</li>
-        <li>Contacto</li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#experience">Experiencia</a></li>
+        <li><a href="#mision">Misión</a></li>
+        <li><a href="#footer">Contacto</a></li>
     </nav>
     <main class="main">
-        <article class="main_Hero services">
+        <article class="main_Hero services" id="services">
             <h1>Servicios</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
             <img class="services--img" src="./images/main/services.png" alt="Servicios">
@@ -75,26 +75,26 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>           
             </div>
         </section>
-        <article class="main_Hero mision">
-            <h1>Misión / Visión</h1>
-            <img class="mision--img" src="./images/main/mision/medalla.jpg" alt="Servicios">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
-            <div class="main_Hero--div">
-                <hr>
-                <button>Leer más..</button>
-            </div>
-        </article>
-        <article class="main_Hero Experience">
+        <article class="main_Hero Experience" id="experience">
             <h1>Experiencia</h1>
             <img class="mision--img" src="./images/main/mision/medalla.jpg" alt="Servicios">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
             <div class="main_Hero--div">
                 <hr>
-                <button>Leer más..</button>
+                <button><a href="./Experience.html">Leer más..</a></button>
+            </div>
+        </article>
+        <article class="main_Hero mision" id="mision">
+            <h1>Misión / Visión</h1>
+            <img class="mision--img" src="./images/main/mision/medalla.jpg" alt="Servicios">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
+            <div class="main_Hero--div">
+                <hr>
+                <button><a href="./Mision.html">Leer más..</a></button>
             </div>
         </article>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <section class="footer_AboutUs">
             <article class="footer_AboutUs--Container">
                 <h1>Contacto</h1>
@@ -103,8 +103,9 @@
             <article class="footer_AboutUs--Container">
                 <h1>En la web</h1>
                 <div class="footer_AboutUs--images">
-                    <img class="footer_AboutUs--img" src="./images/footer/logotipo-de-instagram.svg" alt="">
-                    <img class="footer_AboutUs--img" src="./images/footer/gmail.svg" alt="">
+                    <a href="https://www.instagram.com/tecec.servicios/"><img class="footer_AboutUs--img" src="./images/footer/logotipo-de-instagram.svg" alt=""></a>
+                    <a href="mailto:tececservicios@gmail.com"><img class="footer_AboutUs--img" src="./images/footer/gmail.svg" alt=""></a>
+                    
                 </div>
             </article>
             <article class="footer_AboutUs--Container">
@@ -114,19 +115,19 @@
             
         </section>
         <section class="footer_ContactUs">
-            <form action="">
+            <form action="mailto:tececservicios@gmail.com" method="POST" enctype="text/plain">
                 <h2 class="footer_ContactUs--Title">Tu nombre</h2>
-                <input class="footer_ContactUs--Input" type="text">
+                <input class="footer_ContactUs--Input" name="nombre" type="text">
                 <h2 class="footer_ContactUs--Title">Tu correo eléctronico</h2>
-                <input class="footer_ContactUs--Input" type="text">
+                <input class="footer_ContactUs--Input" name="correo" type="text">
                 <h2 class="footer_ContactUs--Title">Asunto</h2>
-                <input class="footer_ContactUs--Input" type="text">
+                <input class="footer_ContactUs--Input" name="asunto" type="text">
                 <h2 class="footer_ContactUs--Title">Tu mensaje</h2>
-                <input class="footer_ContactUs--Input message" type="text">
-                <button class="footer_ContactUs--Button">Enviar</button>
+                <input class="footer_ContactUs--Input message" name="mensaje" size="20" type="text">
+                <button class="footer_ContactUs--Button" type="submit">Enviar</button>
             </form>
         </section>
     </footer>
-    <script defer src="index.js"></script>
+    <script defer src="./scripts/index.js"></script>
 </body>
 </html>

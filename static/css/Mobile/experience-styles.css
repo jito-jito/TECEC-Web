@@ -58,75 +58,11 @@ html {
     height: 100%;
     padding: 5px;
     background-color: transparent;
-    background-image: url("./images/header/menu/chevron-izquierdo.svg");
+    background-image: url("../../../images/header/menu/chevron-izquierdo.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border: none;
 }
-
-/* button scroll test */
-
-.button {
-    height: 60px;
-}
-
-.boton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:60px;
-    height:60px;
-    background-color:#3b3b3b;
-    margin: 5px;
-    padding:10px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    font-size:11px;
-    line-height:32px;
-    text-transform: uppercase;
-    float:left;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin-right: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .boton:hover{
-    opacity: 0.50;
-    -moz-opacity: .50;
-    filter:alpha (opacity=50);
-  }
-
-/* .img {
-    display: flex;
-    width: 60px;
-    height: 60px;
-    padding: 5px;
-    background-color: transparent;
-    background-image: url(./images/header/menu/lavado-en-seco.svg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
-*/
-.img2 {
-    position: relative;
-    left: -2px;
-    width: 22px;
-} 
-
-/* end */
-
 
 
 
@@ -207,3 +143,59 @@ html {
     font-family: var(--font-text);
     font-size: var(--font-text-size);
 }
+
+
+
+/* button-back scroll */
+
+.button_Container {
+    height: 60px;
+}
+
+.button_Back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:60px;
+    height:60px;
+    /* background-color:#e02525; */
+    background-color:#3b3b3b;
+    margin: 5px;
+    padding:10px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    font-size:11px;
+    line-height:32px;
+    text-transform: uppercase;
+    float:left;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  
+.button_Back a {
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 10px; */
+}
+
+  .button_Back:hover{
+    opacity: 0.50;
+    -moz-opacity: .50;
+    filter:alpha (opacity=50);
+  }
+
+.button_Back--img {
+    position: relative;
+    left: -2px;
+    width: 22px;
+    /* margin-top: 10px; */
+} 
+
+/* end */
