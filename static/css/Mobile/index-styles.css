@@ -64,6 +64,10 @@ html {
     border: none;
 }
 
+.header-nav--menu:focus {
+    outline: none;
+}
+
 
 .header-nav--menu.close {
     border: none;
@@ -115,7 +119,7 @@ html {
     color: white;
     font-family: var(--font-text);
     font-size: var(--font-title-size);
-
+    text-decoration: none;
 }
 
 
@@ -184,12 +188,20 @@ html {
     height: 40px;
     border: none;
     border-radius: 10px;
+    /* color: white; */
 }
-
+.main_Hero button a {
+    color: white;
+    text-decoration: none;
+}
 .main_Hero button:hover {
     /* background-color: #ecb612; */
-    /* color: white; */
+    color: white;
     cursor: pointer;
+}
+
+.main_Hero button:focus {
+    outline: none;
 }
 
 
