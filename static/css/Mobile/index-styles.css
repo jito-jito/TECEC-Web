@@ -1,10 +1,10 @@
 :root {
     --primary-color: #303030;
     --font-title:'Roboto', sans-serif;
-    --font-title-size: 2.2rem;
+    --font-title-size: 2rem;
     --header-font-size: 2rem;
     --font-text: 'Poppins', sans-serif;
-    --font-text-size: 1.8rem;
+    --font-text-size: 1.3rem;
 }
 
 * {
@@ -22,6 +22,13 @@ html {
     width: 100%;
     height: 80px;
     background-color: var(--primary-color);
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 5%; */
+}
+
+.header-conteiner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -174,46 +181,16 @@ html {
 
 
 
-/* .main_Hero--div {
-    height: 40px;
-}
-
-.main_Hero--div hr {
-    height: 5px;
-    position: relative;
-    bottom: -20px;
-}
-
-.main_Hero button {
-    background-color: #DCA70C;
-    position: relative;
-    width: 100px;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    color: white;
-}
-.main_Hero button a {
-    color: white;
-    text-decoration: none;
-}
-.main_Hero button:hover {
-    background-color: #ecb612;
-    color: white;
-    cursor: pointer;
-}
-
-.main_Hero button:focus {
-    outline: none;
-} */
-
-
 .main_Services {
     margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 }
 
 .main_Container {
+    max-width: 300px;
     margin: 5% 5%;
     text-align: center;
     background-color: #fdfcfc;
@@ -223,10 +200,8 @@ html {
 }
 
 .main_Container--box {  
-    
     width: 100%;
     height: 200px;
-    /* border: 1px solid black; */
     margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -262,10 +237,6 @@ html {
 
 
 .main_Hero--carousel{
-    /* width: 600px; */
-    /* height: 410px; */
-    /* padding: 25px; */
-    /* border: 1px solid red; */
     white-space: nowrap;
     overflow-x: auto;
     display: flex;
@@ -273,16 +244,25 @@ html {
     flex-wrap: nowrap;
 }
 
-.carousel-item {
+.carousel-item.experience {
     width: 280px;
     height: 100%;
-    background-color: #dadada;
+    background-color: #eeeeee;
     border-radius: 15px;
-    /* display: inline-block; */
     white-space: normal;
     padding: 5%;
     margin-right: 15px;
-    /* flex-basis: fit-content; */
+    flex-shrink: 0;
+}
+
+.carousel-item.mision {
+    width: 280px;
+    height: 100%;
+    background-color: #eeeeee;
+    border-radius: 15px;
+    white-space: normal;
+    padding: 5%;
+    margin-right: 15px;
     flex-shrink: 0;
 }
 
@@ -290,22 +270,23 @@ html {
     
     width: 100%;
     height: 200px;
-    /* border: 1px solid black; */
     margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
 .carousel-figure img {
-    width: 100%;
+    width: 200px;
     height: 200px;
 }
 
+.carousel-figure.experience img{
+    width: 100%;
+}
 .carousel-item h1,h2 {
     font-family: var(--font-title);
     font-size: var(--font-title-size);
     font-weight: 800;
-    /* background-color: rgba(238, 238, 238, 0.788); */
 }
 
 .carousel-item h2 {
@@ -336,7 +317,6 @@ html {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    /* border: 1px solid black; */
     padding: 2%;
     font-family: var(--font-title);
     font-size: 2rem;
@@ -353,7 +333,6 @@ html {
     letter-spacing: 2px;
     font-family: var(--font-title);
     font-size: var(--font-title-size);
-    /* color: #ffffff; */
 
 }
 
@@ -383,7 +362,6 @@ html {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* border: 1px solid black; */
     color: white;
     font-family: var(--font-title);
     font-size: var(--font-title-size);
@@ -418,4 +396,88 @@ html {
     margin-bottom: 20px;
 }
 
+@media (min-width: 400px) {
+    .main_Services {
+        flex-direction: row;
+        flex-shrink: 0.1;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main_Container {
+        margin: 5px 5px;
+    }
+}
 
+
+@media (min-width: 590px) {
+    .main_Services {
+        /* max-width: 280px; */
+        flex-direction: row;
+        flex-shrink: 0.1;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main_Container {
+        max-width: 280px;
+        margin: 5px 5px;
+    }
+}
+
+@media (min-width: 1000px) {
+    /* body {
+        margin-left: 20%;
+        margin-right: 20%;
+    } */
+    .header-conteiner, .main-container, .footer-container   {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+
+    .header-conteiner {
+        padding: 1% 5%;
+    }
+
+    .main_Hero p {
+        padding: 0 30px;
+    }
+
+    .main_Hero--carousel{
+        justify-content: center;
+    }
+
+    .carousel-item.mision, .carousel-item.experience{
+        padding: 0;
+    }
+
+
+    .footer {
+        padding-top: 1%;
+    }
+
+
+    .footer-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer_AboutUs {
+        padding-top: 7%;
+        width: 50%;
+    }
+    .footer_ContactUs{
+        width: 50%;
+    }
+
+
+    /* .main-container {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .footer-container {
+        margin-left: 20%;
+        margin-right: 20%;
+    } */
+
+}
