@@ -6,7 +6,8 @@ let menuOpen = false
 NavButton.addEventListener('click', togglemenu)
 
 function togglemenu(event) {
-    
+    console.log(event)
+
     if(!menuOpen) {
         console.log("abrir menu")
         NavButton.classList.replace("close","open")
@@ -20,4 +21,8 @@ function togglemenu(event) {
     }
 
 
+}
+
+function funcion () {
+    alert("???")
 }
