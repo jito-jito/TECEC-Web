@@ -395,6 +395,30 @@ html {
     align-self: center;
     margin-bottom: 20px;
 }
+hr {
+    border: 0; 
+    height: 2px; 
+    text-align: center; 
+    /* background: linear-gradient(left, #fff, #000, #fff); */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+    width: 6px;
+    -webkit-box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    background-color: #CCCCCC;
+}
+::-webkit-scrollbar-thumb{
+    width: 6px;
+    border-radius: 10px;
+    background-color: #888888;
+    background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.4) 50%,transparent,transparent)
+}
 
 @media (min-width: 400px) {
     .main_Services {
@@ -405,6 +429,10 @@ html {
     }
     .main_Container {
         margin: 5px 5px;
+    }
+    .services--img {
+        width: 240px;
+        height: 270px;
     }
 }
 
@@ -429,8 +457,8 @@ html {
         margin-right: 20%;
     } */
     .header-conteiner, .main-container, .footer-container   {
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 15%;
+        margin-right: 15%;
     }
 
 
@@ -438,8 +466,23 @@ html {
         padding: 1% 5%;
     }
 
+    .services--img{
+        width: 270px;
+        height: 300px;
+    }
+    
+    .main {
+        padding: 2%;
+    }
+    .main_Hero--title{
+        font-weight: 500;
+        font-size: 2.5rem;
+        padding: 8px;
+    }
+
     .main_Hero p {
         padding: 0 30px;
+        margin-bottom: 25px;
     }
 
     .main_Hero--carousel{
@@ -449,7 +492,20 @@ html {
     .carousel-item.mision, .carousel-item.experience{
         padding: 0;
     }
+    .main_Hero--carousel.Experience{
+        padding-left: 350px;
+    }
+    .carousel-item.experience{
+        margin-bottom: 25px;
+        /* padding-left: 500px; */
+    }
+    .carousel-figure.experience img {
+        width: 90%;
+    }
 
+    .mision {
+        margin: 3% 0;
+    }
 
     .footer {
         padding-top: 1%;
