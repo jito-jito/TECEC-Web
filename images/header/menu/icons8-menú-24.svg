@@ -1,0 +1,33 @@
+<!-- 
+    xmlns : indica el espacio de nombres empleado en el dibujo, es siempre 'https://www.w3.org/2000/svg.' Este atributo es obligatorio cuando la imagen SVG se encuentra en un fichero aparte (con la extensión .svg), pero este atributo es optativo cuando la imagen SVG está incluida en una página web.
+
+    viewBox establece la porción del plano SVG que muestra la imagen. Este atributo se establece con cuatro valores:
+    primer valor: abcisa (X) de la esquina superior izquierda de la porción del plano que muestra la imagen
+    segundo valor: ordenada (Y) de la esquina superior izquierda de la porción del plano que muestra la imagen
+    tercer valor: ancho de la porción del plano que muestra la imagen
+    cuarto valor: alto de la porción del plano que muestra la imagen
+
+    width y height establecen el ancho y el alto de la imagen en la pagina web
+
+    fill : para el color de relleno de figuras cerradas
+    stroke-width : establece el grosor del trazo
+    
+    terminaciones del trazo:
+    stroke-linecap= "butt"   :  recto
+    stroke-linecap= "round"   :  redondo
+    stroke-linecap= "square"   :  recto (pero hace que la linea se prolonge un poco)
+-->
+
+
+
+<svg id="menu-24" 
+
+fill= "#BCBCBC"
+stroke-width="10"
+xmlns="http://www.w3.org/2000/svg"  
+viewBox="0 0 24 24" 
+width="24px" height="24px">
+
+<path d="M 0 2 L 0 4 L 24 4 L 24 2 Z M 0 11 L 0 13 L 24 13 L 24 11 Z M 0 20 L 0 22 L 24 22 L 24 20 Z"/>
+
+</svg>
