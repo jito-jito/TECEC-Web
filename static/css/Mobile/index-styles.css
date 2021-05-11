@@ -183,14 +183,16 @@ html {
 
 .main_Services {
     margin-top: 5%;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     
 }
 
-.main_Container {
+.main_Services_container {
     max-width: 300px;
+    height: 430px;
     margin: 5% 5%;
     text-align: center;
     background-color: #fdfcfc;
@@ -199,7 +201,7 @@ html {
 
 }
 
-.main_Container--box {  
+.main_Services_container--box {  
     width: 100%;
     height: 200px;
     margin: 0 auto;
@@ -207,7 +209,7 @@ html {
     margin-bottom: 10px;
 }
 
-.main_Container--box img {
+.main_Services_container--box img {
     width: 100%;
     height: 200px;
 }
@@ -215,24 +217,24 @@ html {
 
 
 
-.main_Container h1, h2{
+.main_Services_container h1, h2{
     font-family: var(--font-title);
     font-size: var(--font-title-size);
     font-weight: 800;
 }
 
-.main_Container h2 {
+.main_Services_container h2 {
     color: #BCBCBC;
     margin-bottom: 5%;
 }
 
-.main_Container p {
+.main_Services_container p {
     font-family: var(--font-text);
     font-size: var(--font-text-size);
 }
 
 .Experience {
-    margin-top: 13%;  
+    margin-top: 20px; 
 }
 
 
@@ -246,7 +248,7 @@ html {
 
 .carousel-item.experience {
     width: 280px;
-    height: 100%;
+    height: 485px;
     background-color: #eeeeee;
     border-radius: 15px;
     white-space: normal;
@@ -258,11 +260,12 @@ html {
 
 .carousel-item.mision {
     width: 280px;
-    height: 100%;
+    height: 500px;
     background-color: #eeeeee;
     border-radius: 15px;
     white-space: normal;
     padding: 5%;
+    padding-top: 12px;
     margin-right: 15px;
     flex-shrink: 0;
 }
@@ -303,7 +306,7 @@ html {
 
 .mision {
     margin: 6% 0; 
-    margin-top: 13%;  
+    /* margin-top: 13%;   */
 }
 
 
@@ -441,7 +444,7 @@ hr {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .main_Container {
+    .main_Services_container {
         margin: 5px 5px;
     }
     .services--img {
@@ -461,15 +464,16 @@ hr {
         flex-shrink: 0.1;
         flex-wrap: wrap;
         justify-content: center;
+        margin-bottom: 20px;
     }
-    .main_Container {
+    .main_Services_container {
         max-width: 280px;
         margin: 5px 5px;
     }
 
-    .Experience {
+    /* .Experience {
         margin-top: 6%;
-    }
+    } */
 }
 
 @media (min-width: 1000px) {
@@ -480,6 +484,7 @@ hr {
     .header-conteiner, .main-container, .footer-container   {
         margin-left: 15%;
         margin-right: 15%;
+        
     }
 
 
@@ -510,7 +515,12 @@ hr {
         justify-content: center;
     }
 
-    .carousel-item.mision, .carousel-item.experience{
+    .carousel-item.mision {
+        padding: 0;
+        padding-top: 12px;
+    }
+
+    .carousel-item.experience {
         padding: 0;
     }
     .main_Hero--carousel.Experience{
@@ -553,13 +563,10 @@ hr {
     }
 
 
-    /* .main-container {
+    
+    /* .footer-container {
         margin-left: 20%;
         margin-right: 20%;
-    }
-    .footer-container {
-        margin-left: 20%;
-        margin-right: 20%;
-    } */
+    }  */
 
 }
