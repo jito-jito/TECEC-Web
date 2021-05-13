@@ -471,16 +471,9 @@ hr {
         margin: 5px 5px;
     }
 
-    /* .Experience {
-        margin-top: 6%;
-    } */
 }
 
 @media (min-width: 1000px) {
-    /* body {
-        margin-left: 20%;
-        margin-right: 20%;
-    } */
     .header-conteiner, .main-container, .footer-container   {
         margin-left: 15%;
         margin-right: 15%;
@@ -511,9 +504,9 @@ hr {
         margin-bottom: 25px;
     }
 
-    .main_Hero--carousel{
+    /* .main_Hero--carousel{
         justify-content: center;
-    }
+    } */
 
     .carousel-item.mision {
         padding: 0;
@@ -523,16 +516,15 @@ hr {
     .carousel-item.experience {
         padding: 0;
     }
-    .main_Hero--carousel.Experience{
+    /* .main_Hero--carousel.Experience{
         padding-left: 350px;
-    }
+    } */
 
    
 
 
     .carousel-item.experience{
         margin-bottom: 25px;
-        /* padding-left: 500px; */
     }
     .carousel-figure.experience img {
         width: 90%;
