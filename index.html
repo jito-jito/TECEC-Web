@@ -199,7 +199,7 @@
             </section>
             <section class="footer_ContactUs">
                 <h1>Envíanos un mensaje</h1>
-                <form action="mailto:tececservicios@gmail.com" method="POST" enctype="text/plain">
+                <!-- <form action="mailto:tececservicios@gmail.com" method="POST" enctype="text/plain">
                     <h2 class="footer_ContactUs--Title">Tu nombre</h2>
                     <input class="footer_ContactUs--Input" name="nombre" type="text">
                     <h2 class="footer_ContactUs--Title">Tu correo eléctronico</h2>
@@ -209,10 +209,37 @@
                     <h2 class="footer_ContactUs--Title">Tu mensaje</h2>
                     <textarea class="footer_ContactUs--Input message" name="mensaje" size="20" type="text"></textarea>
                     <button class="footer_ContactUs--Button" type="submit">Enviar</button>
-                </form>
+                </form> -->
+                <div class="contact-content">
+
+                    <form id="form" action="" class="form">
+                      <h3 class="tag"><span>HABLEMOS</span></h3>
+                      <label for="name">Nombre Completo <span>*</span></label>
+                      <input name="name" required type="text" id="name" placeholder="Juan">
+                      <label for="email">Correo electrónico <span>*</span></label>
+                      <input name="email" type="text" id="email" required placeholder="juan@gmail.com">
+                      <label for="message">Mensaje</label>
+                      <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+                      <button type="submit" class="btn primary full">enviar mensaje</button>
+                    </form>
+                    <a href="mailto:me@leonidasesteban.com" id="trucazo"></a>
+                  </div>
             </section>
         </div>
     </footer>
     <script defer src="./scripts/index.js"></script>
+    <script>
+        const $form = document.querySelector('#form')
+        const $buttonMailto = document.querySelector('#trucazo')
+    
+        $form.addEventListener('submit', handleSubmit)
+    
+        function handleSubmit(event) {
+          event.preventDefault()
+          const form = new FormData(this)
+          $buttonMailto.setAttribute('href', `mailto:me@leonidasesteban.com?subject=nombre ${form.get('name')}  correo ${form.get('email')}&body=${form.get('message')}`)
+          $buttonMailto.click()
+        }
+      </script>
 </body>
 </html>
