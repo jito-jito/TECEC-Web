@@ -377,8 +377,15 @@ html {
     flex-direction: column;
  }
 
+.form textarea {
+    resize: none;
+}
+
 .footer_ContactUs--Title {
     margin: 5px 0;
+    font-family: var(--font-title);
+    font-size: var(--font-title-size);
+    font-weight: 800;
 }
 
 .footer_ContactUs--Input {
