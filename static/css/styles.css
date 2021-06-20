@@ -233,14 +233,11 @@ html {
     font-size: var(--font-text-size);
 }
 
-.Experience {
-    margin-top: 20px; 
-}
 
 
 .main_Hero--carousel{
     white-space: nowrap;
-    overflow-x: auto;
+    overflow: auto;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -258,6 +255,15 @@ html {
     margin-bottom: 25px;
 }
 
+.Experience {
+    margin-top: 20px;
+    
+}
+
+.main_Hero--carousel.mision {
+    justify-content: center;
+}
+
 .carousel-item.mision {
     width: 280px;
     height: 500px;
@@ -266,7 +272,7 @@ html {
     white-space: normal;
     padding: 5%;
     padding-top: 12px;
-    margin-right: 15px;
+    margin: 0 7px;
     flex-shrink: 0;
 }
 
@@ -437,7 +443,7 @@ hr {
     background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.4) 50%,transparent,transparent)
 }
 
-@media (min-width: 400px) {
+@media (min-width: 350px) {
     .main_Services {
         flex-direction: row;
         flex-shrink: 0.1;
@@ -450,6 +456,9 @@ hr {
     .services--img {
         width: 240px;
         height: 270px;
+    }
+    .main_Hero--carousel.mision {
+        justify-content: end;
     }
 }
 
@@ -516,6 +525,9 @@ hr {
     .carousel-item.experience {
         padding: 0;
     }
+
+    
+    
     /* .main_Hero--carousel.Experience{
         padding-left: 350px;
     } */
