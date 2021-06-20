@@ -188,20 +188,22 @@
             </section>
             <section class="footer_ContactUs">
                 <h1>Envíanos un mensaje</h1>
-                <form action="mailto:tececservicios@gmail.com" method="post" enctype="text/plain">
-                    <h2 class="footer_ContactUs--Title">Tu nombre</h2>
-                    <input class="footer_ContactUs--Input" name="nombre" type="text">
-                    <h2 class="footer_ContactUs--Title">Tu correo eléctronico</h2>
-                    <input class="footer_ContactUs--Input" name="correo" type="text">
-                    <h2 class="footer_ContactUs--Title">Asunto</h2>
-                    <input class="footer_ContactUs--Input" name="asunto" type="text">
-                    <h2 class="footer_ContactUs--Title">Tu mensaje</h2>
-                    <textarea class="footer_ContactUs--Input message" name="mensaje" size="20" type="text"></textarea>
-                    <button class="footer_ContactUs--Button" type="submit">Enviar</button>
-                </form>
+                    <form id="form" action="" class="form">
+                      <label class="footer_ContactUs--Title" for="nombre">Nombre</label>
+                      <input class="footer_ContactUs--Input" name="nombre" required type="text" id="nombre" placeholder="Juan">
+                      <label class="footer_ContactUs--Title" for="email">Correo electrónico</label>
+                      <input class="footer_ContactUs--Input" name="email" type="text" id="email" required placeholder="juan@gmail.com">
+                      <label class="footer_ContactUs--Title" for="asunto">Asunto</label>
+                      <input class="footer_ContactUs--Input" name="asunto" type="text" id="asunto" required placeholder="juan@gmail.com">
+                      <label class="footer_ContactUs--Title" for="mensaje">Mensaje</label>
+                      <textarea class="footer_ContactUs--Input" id="mensaje" name="mensaje" id="" cols="30" rows="10"></textarea>
+                      <button class="footer_ContactUs--Button" type="submit" class="btn primary full">enviar mensaje</button>
+                    </form>
+                    <a href="mailto:tececservicios@gmail.com" id="enlaceForm"></a>
             </section>
         </div>
     </footer>
     <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/form.js"></script>
 </body>
 </html>
