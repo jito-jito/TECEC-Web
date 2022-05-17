@@ -1,0 +1,72 @@
+@use 'assets/styles/global.scss' as *;
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 35px 0;
+
+  &-inputMessage {
+    textarea {
+      width: 100%;
+      padding-left: 10px;
+      border: none;
+      border-radius: 8px;
+      background: $input-color;
+      color: $fn-color;
+
+      &::placeholder {
+        color: get-opacity($fn-color, 0.5);
+      }
+  
+      &:focus-visible {
+        outline: solid #ffffff0d;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .contactForm {
+    padding: 35px 30px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .contactForm {
+    padding: 35px 50px;
+  }
+}
+
+@media screen and (min-width: 630px) {
+  .contactForm {
+    padding: 35px 70px;
+  }
+}
+
+@media screen and (min-width: 690px) {
+  .contactForm {
+    padding: 35px 90px;
+  }
+}
+
+
+@media screen and (min-width: 740px) {
+  .contactForm {
+    padding: 0 15px;
+    text-align: left;
+
+    &-input {
+      margin: 10px 0;
+    }
+
+    &-button {
+      align-self: center;
+      width: 100px;
+    }
+
+    &-inputMessage {
+      margin: 10px 0;
+    }
+  }
+}

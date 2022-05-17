@@ -1,0 +1,55 @@
+@use 'assets/styles/global.scss' as *;
+
+.services {
+  color: $fn-color2;
+
+  &-title {
+    text-align: center;
+  }
+
+  &-itemsContainer {
+    display: flex;
+    align-items: flex-start;
+    overflow: auto;
+    margin: 40px 0;
+  }
+}
+
+.serviceItem {
+
+  &-title {
+    color: $fn-color2;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &-subTitle {
+    color: $fn-color3;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &-description {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .services {
+    @include padding-page;
+  }
+}
+
+
+@media screen and (min-width: 1100px) {
+  .services {
+
+    &-title {
+      margin: 50px 0 50px;
+    }
+
+    &-itemsContainer {
+      justify-content: center;
+    }
+  }
+}

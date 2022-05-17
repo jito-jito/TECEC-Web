@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400;1,500&display=swap');
+
+$elevation-1: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$elevation-inset-1: inset 0.5px 0.5px 2px 0px #000000;
+$elevation-inset-2: inset 0.5px 0.5px 5px 0px #000000;
+$borderColor: black;
+$btn-color: #52a85a;
+$fn-plcholder-color: #AEA9A9;
+
+$bright-color: white;
+$bg-color: #303030;
+$bg-color2: #D95B19;
+$fn-color: white;
+$fn-color2: black;
+$fn-color3: #D95B19;
+$fn-type: 'Roboto', sans-serif;
+$input-color: #8b8b8b;
+
+:root {
+  font-size: 15px;
+}
+
+@function get-opacity($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+@mixin flex-centerRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex-columnLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@mixin width-page {
+  @media (min-width: 1100px) {
+    width: 1100px;
+  }
+}
+
+@mixin padding-page {
+  padding: 5px 15px;
+
+  @media (min-width: 480px) {
+    padding: 5px 30px;
+  }
+
+  @media (min-width: 550px) {
+    padding: 5px 40px;
+  }
+
+  @media (min-width: 575px) {
+    padding: 5px 60px;
+  }
+}

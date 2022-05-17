@@ -1,0 +1,29 @@
+@use 'assets/styles/global.scss' as *;
+
+.serviceItem {
+  @include flex-centerRow;
+  flex-shrink: 0;
+  width: 230px;
+  margin: 0 20px;
+
+  &:first-child {
+    margin-left: 40px;
+  }
+
+  &:last-child {
+    margin-right: 70px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .serviceItem {
+  
+    &:first-child {
+      margin-left: 0;
+    }
+  
+    &:last-child {
+      margin-right: 30px;
+    }
+  }
+}
