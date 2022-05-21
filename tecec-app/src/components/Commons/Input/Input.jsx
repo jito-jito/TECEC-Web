@@ -5,7 +5,10 @@ function Input ({
   className,
   title,
   type,
-  placeHolder
+  placeHolder,
+  onChange,
+  id,
+  value
 }) {
   return (
     <label
@@ -16,6 +19,9 @@ function Input ({
       <input
         type={type}
         placeholder={placeHolder}
+        onChange={onChange}
+        value={value}
+        id={id}
       />
     </label>
   )

@@ -11,8 +11,8 @@
   &-itemsContainer {
     display: flex;
     overflow: auto;
-    margin: 40px 0;
-    padding: 0 20px;
+    padding: 0px 20px 20px;
+    margin-bottom: 20px;
     @include width-page;
   }
 }

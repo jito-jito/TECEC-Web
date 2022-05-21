@@ -11,12 +11,10 @@ function Menu () {
 
   useEffect(() => {
     function closeMenu () {
-      if (open) {
         setOpen(false)
-      }
     }
 
-    document.addEventListener('click', closeMenu)
+      document.addEventListener('click', closeMenu)
 
     return function cleanUp () {
       document.removeEventListener('click', closeMenu)
@@ -30,7 +28,7 @@ function Menu () {
           <input
             className='menu-dropdownButton'
             type='button'
-            onClick={() => setOpen(prev => !prev)}
+            onClick={(e) => {e.stopPropagation(); setOpen(prev => !prev)}}
           />
           <ul className={`menu-itemsContainer ${toggleMenu()}`}>
             {pageData.nav_links.map(link => (
