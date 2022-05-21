@@ -43,7 +43,7 @@ function ContactForm () {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let formBody = `
+    let formBody = ` form-name: contact
       new message from ${formData.name}
       email: ${formData.email}
       issue: ${formData.issue}
@@ -70,9 +70,7 @@ function ContactForm () {
     <>
       <form
         className='contactForm'
-        name="contact" 
         onSubmit={handleSubmit}
-        data-netlify="true"
       >
         <h2>Envíanos un mensaje</h2>
         <Input
@@ -82,6 +80,7 @@ function ContactForm () {
           type='text'
           onChange={handleChange}
           value={formData.name}
+          name="name"
           id="name"
         />
         <Input
@@ -91,6 +90,7 @@ function ContactForm () {
           type='text'
           onChange={handleChange}
           value={formData.email}
+          name="email"
           id="email"
         />
         <Input
@@ -100,6 +100,7 @@ function ContactForm () {
           type='text'
           onChange={handleChange}
           value={formData.issue}
+          name="issue"
           id="issue"
         />
         <label
@@ -108,12 +109,12 @@ function ContactForm () {
         >
           <h4>Mensaje</h4>
           <textarea
-            name=''
             cols='15'
             rows='5'
             placeholder='Mensaje importante'
             onChange={handleChange}
             value={formData.message}
+            name="message"
             id="message"
           />
         </label>
