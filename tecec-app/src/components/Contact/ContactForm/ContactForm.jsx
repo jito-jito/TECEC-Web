@@ -10,35 +10,19 @@ function ContactForm () {
     issue: '',
     message: ''
   })
+  const [pageState, setPageState] = useState({
+    loading: false,
+    error: false,
+    success: false
+  })
 
   const handleChange = (e) => {
-    switch (e.target.id) {
-      case 'name':
-        setFormData({
-          ...formData,
-          name: e.target.value
-        })
-        break
-      case 'email':
-        setFormData({
-          ...formData,
-          email: e.target.value
-        })
-        break
-      case 'issue':
-        setFormData({
-          ...formData,
-          issue: e.target.value
-        })
-        break
-      case 'message':
-        setFormData({
-          ...formData,
-          message: e.target.value
-        })
-        break
-      default:
-    }
+    setPageState({
+      loading: false, 
+      error: false,
+      success: false
+    })
+    setFormData({ ...formData, [e.target.id]: e.target.value })
   }
 
   function encode(data) {
@@ -50,31 +34,51 @@ function ContactForm () {
       .join("&");
   }
 
+  const areValidCredentials = () => {
+    const hasIncompleted = Object.keys(formData)
+      .some(key => formData[key].length === 0)
+    if(hasIncompleted) {
+      throw new Error('Completa todos los campos')
+    }
+
+    const isValidEmail = formData.email.toLowerCase().match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+    if(!isValidEmail) {
+      throw new Error('Ingresa un email válido')
+    }
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let formBody = ` form-name: contact
-      new message from ${formData.name}
-      email: ${formData.email}
-      issue: ${formData.issue}
-      message: ${formData.message}
-    `
-
+    
     try {
+      areValidCredentials()
+      setPageState({...pageState, loading: true})
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
           "form-name": 'contact',
-          body: formBody,
+          ...formData,
         }),
       })
 
       if (!response.ok) {
         throw new Error(`${response.statusText} ${response.status}`)
       }
-      alert("Form successfully submitted")
+      setPageState({
+        ...pageState, 
+        loading: false, 
+        error: false,
+        success: 'Gracias por contactarte con nosotros!, responderemos a la brevedad'
+      })
     } catch (error) {
-      alert(error)
+      setPageState({
+        loading: false,
+        error: `${error.message}`,
+        success: false
+      })
     }
   }
 
@@ -136,6 +140,13 @@ function ContactForm () {
         >
           Enviar
         </Button>
+        {pageState.loading && 
+          <div class="loading spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        }
+        {pageState.error && <p className='error'>{pageState.error}</p>}
+        {pageState.success && <p className='success'>{pageState.success}</p>}
       </form>
     </>
   )
