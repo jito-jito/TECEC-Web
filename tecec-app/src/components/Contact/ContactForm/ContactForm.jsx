@@ -41,6 +41,15 @@ function ContactForm () {
     }
   }
 
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) =>
+          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     let formBody = ` form-name: contact
@@ -54,7 +63,10 @@ function ContactForm () {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encodeURIComponent(formBody),
+        body: encode({
+          "form-name": 'contact',
+          body: formBody,
+        }),
       })
 
       if (!response.ok) {
