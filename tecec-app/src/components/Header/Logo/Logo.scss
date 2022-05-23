@@ -1,0 +1,18 @@
+@use 'assets/styles/global.scss' as *;
+
+.logo {
+  @include flex-centerRow;
+  &-image {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    img {
+      width: inherit;
+      height: inherit;
+    }
+  }
+  &-title {
+    margin: 0;
+    font-family: $fn-type;
+  }
+}

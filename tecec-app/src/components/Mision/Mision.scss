@@ -1,0 +1,33 @@
+@use 'assets/styles/global.scss' as *;
+
+.mision {
+  @include padding-page;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  &-container {
+    width: 100%;
+    @include width-page;
+  }
+
+  &-description {
+    color: $fn-color2;
+  }
+
+  &-itemsContainer {
+    display: flex;
+    overflow-x: auto;
+    padding: 40px 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .mision {
+    &-itemsContainer {
+      justify-content: center;
+    }
+  }
+
+}

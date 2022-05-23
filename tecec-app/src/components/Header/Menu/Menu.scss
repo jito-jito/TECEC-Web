@@ -1,0 +1,72 @@
+@use 'assets/styles/global.scss' as *;
+
+.menu {
+  position: relative;
+  display: flex;
+
+  &-itemsContainer {
+    z-index: 10;
+    width: 120px;
+    padding: 0;
+    list-style: none;
+    &.desktop {
+      width: 100%;
+      display: none;
+    }
+    &.open {
+      position: absolute;
+      top: 40px;
+      right: 0;
+      display: block;
+      background-color: $bg-color;
+    }
+    &.close {
+      display: none;
+    }
+  }
+
+  &-dropdown {
+    display: flex;
+  }
+
+  &-dropdownButton {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../../../assets/images/header/menu/icons8-menú-24.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-item {
+    padding: 10px 5px 10px 15px;
+    a {
+      font-weight: 500;
+      text-decoration: none;
+      color: $fn-color;
+      transition: color 0.2s;
+      &:hover {
+        color: $bg-color2;
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menu {
+    &-itemsContainer {
+      &.desktop {
+        display: flex;  
+        margin: 0;
+      }
+    }
+    &-dropdownButton {
+      display: none;
+    }
+    &-item {
+      padding: 10px 10px;
+    }
+  }
+}

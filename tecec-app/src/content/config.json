@@ -1,0 +1,20 @@
+{
+  "nav_links": [
+    {
+      "name": "Servicios",
+      "target": "servicios"
+    },
+    {
+      "name": "Experiencia",
+      "target": "experiencia"
+    },
+    {
+      "name": "Nosotros",
+      "target": "nosotros"
+    },
+    {
+      "name": "Contacto",
+      "target": "contacto"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+@use 'assets/styles/global.scss' as *;
+
+.input {
+  margin-bottom: 10px;
+  
+  p {
+    margin: 0;
+  }
+
+  input {
+    width: 100%;
+    padding-left: 10px;
+    border: none;
+    border-radius: 8px;
+    background: $input-color;
+    color: $fn-color;
+
+    &::placeholder {
+      color: get-opacity($fn-color, 0.5);
+    }
+
+    &:focus-visible {
+      outline: solid #ffffff0d;
+    }
+  }
+}

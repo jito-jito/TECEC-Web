@@ -1,0 +1,63 @@
+@use 'assets/styles/global.scss' as *;
+
+.contact {
+  @include padding-page;
+  background: url('../../assets/images/main/Contact.png');
+  background-size: cover;
+  
+  &-title {
+    margin-bottom: 20px;
+    color: $fn-color;
+  }
+
+  &-container {
+    width: 100%;
+    @include width-page;
+  }
+
+  &-itemsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.contactItem {
+  &-item {
+    margin: 0;
+  }
+
+  &-icon {
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 740px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+      margin-bottom: 40px;
+    }
+    
+    &-container {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 35px;
+    }
+
+    &-itemsContainer {
+      justify-content: space-between;
+    }
+  }
+
+  .contactItem {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}

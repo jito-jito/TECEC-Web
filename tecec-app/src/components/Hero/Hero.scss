@@ -1,0 +1,58 @@
+@use 'assets/styles/global.scss' as *;
+
+.hero {
+  @include padding-page;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.466);
+  background-image: url('../../assets/images/main/hero2.png');
+  background-size: cover;
+
+  &-container {
+    @include flex-centerRow;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    @include width-page;
+  }
+
+  &-title {
+    text-align: center;
+  }
+
+  &-buttons {
+    width: 165px;
+  }
+
+  &-button {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .hero {
+    height: 370px;
+
+    &-container {
+      align-items: flex-start;    
+    }
+
+    &-title {
+      max-width: 500px;
+      text-align: left;
+    }
+
+    &-buttons {
+      width: 100%;
+      display: flex;
+    }
+
+    &-button {
+      width: fit-content;
+      margin-right: 20px;
+    }
+  }
+
+}
