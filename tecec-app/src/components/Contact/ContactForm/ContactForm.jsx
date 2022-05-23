@@ -67,12 +67,16 @@ function ContactForm () {
       if (!response.ok) {
         throw new Error(`${response.statusText} ${response.status}`)
       }
+
       setPageState({
         ...pageState, 
         loading: false, 
         error: false,
-        success: 'Gracias por contactarte con nosotros!, responderemos a la brevedad'
+        success: 'Enviado'
       })
+
+      alert('Gracias por contactarte con nosotros!, te responderemos a la brevedad')
+      window.location.reload(true)
     } catch (error) {
       setPageState({
         loading: false,

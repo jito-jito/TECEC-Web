@@ -8,14 +8,14 @@ import './Contact.scss'
 const contactData = [
   {
     title: 'Llámanos',
-    items: ['+569 35805401', '+569 46541829']
+    items: ['+569 35805401', '+569 46541829', 'tececservicios@gmail.com']
   },
   {
     title: 'En la Web',
     icons: [
       {
-        name: 'gmail',
-        url: 'tececservicios@gmail.com'
+        name: 'linkedin',
+        url: 'https://www.linkedin.com/in/tecec-servicios/'
       },
       {
         name: 'instagram',

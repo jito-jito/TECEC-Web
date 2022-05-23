@@ -5,6 +5,7 @@ import certificationIcon from '../../../assets/images/icons/certificationIcon.pn
 import proyectosIcon from '../../../assets/images/icons/proyectosIcon.png'
 import instagramIcon from '../../../assets/images/icons/instagramIcon.svg'
 import gmailIcon from '../../../assets/images/icons/gmailIcon.svg'
+import linkedinIcon from '../../../assets/images/icons/linkedinIcon.png'
 import './Icon.scss'
 
 function Icon ({
@@ -23,6 +24,8 @@ function Icon ({
         return proyectosIcon
       case 'gmail':
         return gmailIcon
+      case 'linkedin':
+        return linkedinIcon
       case 'instagram':
         return instagramIcon
       default:
